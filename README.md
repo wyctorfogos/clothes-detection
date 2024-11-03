@@ -13,3 +13,6 @@ Copy the absolute path directory and put it text on the 'image_path' variable co
 
 Then, run the command on the terminal:
 `python3 src/val.py`
+
+
+![Clothes detection](https://github.com/wyctorfogos/clothes-detection/blob/main/ClothesDetection.png)
