@@ -4,3 +4,4 @@ runs/*
 yolov8m.pt
 yolov8s.pt
 yolov8n.pt
+src/models/__pycache__
