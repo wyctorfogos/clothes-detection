@@ -15,10 +15,10 @@ Then, run the command on the terminal:
 `python3 src/val.py`
 
 ## API access
-It's necessary to change the model folder path in 'src/models/object_detection.py'. Then run the command bellow:
+It's necessary to change the model folder path in 'src/models/object_detection.py' and 'API_PORT' in a /docker/.env (must have to create it). Then run the command bellow:
 `python3 src/app.py`
 
-Now it's possible to get the clothe's information using a simple REST api call. It's running on the port '8000' by default, but can be changed.
+Now it's possible to get the clothe's information using a simple REST api call. It's running on the port 'API_PORT' by default, but can be changed.
 
 Its a POST request typy to 'clothes_detection', where a file is necessary to be indexed with a name 'image' on the form-data.
 

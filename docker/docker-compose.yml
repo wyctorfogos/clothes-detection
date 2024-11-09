@@ -1,0 +1,29 @@
+services:
+  clothers-detector-service:
+    build:
+      context: .
+      dockerfile: dockerfile
+    env_file:
+      - ./.env
+    volumes:
+      - ../src:/app/src
+      - ../src/api/model:/app/src/api/model
+      - ../src/models:/app/src/models/
+      - ../runs:/weights/ 
+    environment:
+      - API_PORT:${API_PORT}
+    ports:
+      - ${API_PORT}:${API_PORT}
+    command: "python3 /app/src/app.py"
+    tty: true
+    restart: always
+    cpus: 8
+    mem_limit: 4000MB
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    runtime: nvidia  
+    networks:
+      - default

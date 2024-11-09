@@ -1,6 +1,7 @@
 data/*
 wandb
 runs/*
+docker/.env
 yolov8m.pt
 yolov8s.pt
 yolov8n.pt

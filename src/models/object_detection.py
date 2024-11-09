@@ -5,7 +5,7 @@ import torch
 
 class ObjectDetection():
     def __init__(self):
-        self.model_path = "/home/wytcor/PROJECTs/ClothesDetectionAndRecognition/runs/detect/train6/weights/last.pt"
+        self.model_path = "/weights/detect/train6/weights/last.pt"
         self.device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model=(self.load_model()).to(self.device)
     

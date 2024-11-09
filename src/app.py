@@ -4,6 +4,9 @@ import utils
 from utils.convertBufferIntoImage import convertBufferIntoImage
 import models
 from models import object_detection
+import os
+
+API_PORT=os.getenv("API_PORT")
 
 # Instanciar o modelo de detecção de objetos
 model = object_detection.ObjectDetection()
@@ -38,4 +41,4 @@ async def clothes_detection(image: UploadFile = File(...)):
 
 # Iniciar o servidor Uvicorn se o script for executado diretamente
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=API_PORT)
