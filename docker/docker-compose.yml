@@ -6,9 +6,9 @@ services:
     env_file:
       - ./.env
     volumes:
-      - ../src:/app/src
-      - ../src/api/model:/app/src/api/model
+      - ../src:/app/src/
       - ../src/models:/app/src/models/
+      - ../src/utils:/app/src/utils/
       - ../runs:/weights/ 
     environment:
       - API_PORT:${API_PORT}

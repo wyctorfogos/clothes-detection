@@ -41,4 +41,4 @@ async def clothes_detection(image: UploadFile = File(...)):
 
 # Iniciar o servidor Uvicorn se o script for executado diretamente
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=API_PORT)
+    uvicorn.run(app, host="0.0.0.0", port=int(API_PORT))
