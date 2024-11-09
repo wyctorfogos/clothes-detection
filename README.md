@@ -14,9 +14,12 @@ Copy the absolute path directory and put it text on the 'image_path' variable co
 Then, run the command on the terminal:
 `python3 src/val.py`
 
+
 ## API access
-It's necessary to change the model folder path in 'src/models/object_detection.py' and 'API_PORT' in a /docker/.env (must have to create it). Then run the command bellow:
-`python3 src/app.py`
+It's necessary to change the model folder path in 'src/models/object_detection.py' and 'API_PORT' in a /docker/.env (must have to create it). 
+
+After this, inside the 'docker' folder and run the command bellow:
+`docker compose build && docker compose up -d`
 
 Now it's possible to get the clothe's information using a simple REST api call. It's running on the port 'API_PORT' by default, but can be changed.
 
